@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<List<BlocPost>>(create: (_) => blocPost),
+        Provider<List<BlohPost>>(create: (_) => blogPost),
         ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
@@ -44,12 +44,12 @@ class MyApp extends StatelessWidget {
   }
 }
  
-final blocPost=[
-  BlocPost(
+final blogPost=[
+  BlogPost(
     title: 'What is provider?', publishedDate: DateTime(2022,5,25),
     data:'A wrapper around Inherited Widget to make them easier to use and more resubale.',
   ),
-  BlocPost(
+  BlogPost(
     title: 'What is multi-provider?', publishedDate: DateTime(2022,5,26),
     data:'A provider that merges multiple providers into a single linears widget tree. It is used to improve readability and reduce boilerplate code of having to nest multiple layers of providers.',
   ),
