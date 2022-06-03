@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider/bloc_post.dart';
 
-class BlocPage extends StatelessWidget {
-  final BlocPost blocPost;
-  const BlocPage({ Key? key, required this.blocPost }) : super(key: key);
+class BlogPage extends StatelessWidget {
+  final BlogPost blogPost;
+  const BlogPage({ Key? key, required this.blocPost }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +34,14 @@ class BlocPage extends StatelessWidget {
                     fontSize: 45,fontWeight: FontWeight.w800,color:Colors.black)),
               ),
               SizedBox( height:18 ),
-              SelectableText(blocPost.title,
+              SelectableText(blogPost.title,
               style:Theme.of(context).textTheme.headline2),
               SelectableText(
-              blocPost.date,
+              blogPost.date,
               style: Theme.of(context).textTheme.caption,),
               SizedBox(height: 18),  
               SelectableText(
-              blocPost.data,
+              blogPost.data,
               ),
               ],
     ))));
