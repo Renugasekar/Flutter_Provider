@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   const HomePage({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final posts = Provider.of<List<BlocPost>>(context);
+    final posts = Provider.of<List<BlogPost>>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -43,12 +43,12 @@ class HomePage extends StatelessWidget {
                   fontSize: 27,color:Colors.black))),
               SizedBox( height:18,),
               SelectableText(
-                'Bloc',
+                'Blog',
                 style:TextStyle(
                   fontSize: 35,fontWeight: FontWeight.bold,color:Colors.black)),
               SizedBox(height:5),
               for (var post in posts)
-              BlocList(post: post,),
+              BlogList(post: post,),
             ]
             ),
         ),
@@ -56,9 +56,9 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-class BlocList extends StatelessWidget {
-  final BlocPost post;
-  const BlocList({ Key? key, required this.post}) : super(key: key);
+class BlogPost extends StatelessWidget {
+  final BlogPost post;
+  const BlogList({ Key? key, required this.post}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +67,7 @@ class BlocList extends StatelessWidget {
       children: [
         InkWell(
                 onTap: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => BlocPage(blocPost: post,)));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => BlogPage(blogPost: post,)));
                 },
                 child:Text(post.title, style:TextStyle(
                    fontSize: 18,color:Colors.blue),
