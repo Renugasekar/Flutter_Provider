@@ -5,7 +5,7 @@ import 'package:flutter_provider/bloc_post.dart';
 
 class BlogPage extends StatelessWidget {
   final BlogPost blogPost;
-  const BlogPage({ Key? key, required this.blocPost }) : super(key: key);
+  const BlogPage({ Key? key, required this.blogPost }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
